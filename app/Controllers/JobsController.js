@@ -4,71 +4,71 @@ import { jobsService } from "../Services/JobsService.js";
 
 //Private
 function _draw() {
-  let cars = ProxyState.cars
+  let jobs = ProxyState.jobs
   let template = ''
-  cars.forEach(car => {
-    template += car.Template
+  jobs.forEach(job => {
+    template += job.Template
   })
-  document.getElementById('cars').innerHTML = template
+  document.getElementById('jobs').innerHTML = template
 }
 
 //Public
-export default class CarsController {
+export default class JobsController {
   constructor() {
-    ProxyState.on('cars', _draw);
+    ProxyState.on('jobs', _draw);
 
     // REVIEW
-    // GET CARS ON LOAD
-    this.getCars()
+    // GET jobS ON LOAD
+    this.getJobs()
   }
 
-  async getCars() {
+  async getJobs() {
     try {
-      await carsService.getCars()
+      await jobsService.getJobs()
     } catch (error) {
       console.error(error)
     }
   }
 
-  async createCar() {
+  async createJob() {
     try {
       window.event.preventDefault()
       const form = window.event.target
-      let newCar = {
+      let newJob = {
         // @ts-ignore
-        make: form.make.value,
-        // @ts-ignore
-        model: form.model.value,
-        // @ts-ignore
-        year: form.year.value,
-        // @ts-ignore  this converts the string to a number
-        price: Number(form.price.value),
+        company: form.company.value,
         // @ts-ignore
         description: form.description.value,
         // @ts-ignore
-        imgUrl: form.imgUrl.value
+        jobTitle: form.jobTitle.value,
+        // @ts-ignore  this converts the string to a number
+        hours: Number(form.hours.value),
+        // @ts-ignore
+        rate: form.rate.value,
       }
-      await carsService.createCar(newCar)
+      await jobsService.createJob(newJob)
 
       // @ts-ignore
       form.reset()
 
-      $('#new-car-form').modal('hide')
+      $('#new-job-form').modal('hide')
     } catch (error) {
       console.error(error)
     }
   }
 
-  deleteCar(id) {
+  deleteJob(id) {
     try {
-      carsService.deleteCar(id)
+      jobsService.deleteJob(id)
     } catch (error) {
       console.error(error)
     }
   }
 
   bid(id) {
-    carsService.bid(id)
+    jobsService.bid(id)
   }
 
 }
+
+

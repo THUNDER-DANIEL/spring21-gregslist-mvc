@@ -26,7 +26,7 @@
     <main class="container" id='app'>
         <div class="row mt-5">
             <div class="col">
-                <h1>Cars
+                <h1>Cars 🚓 
                     <!-- Button trigger modal -->
                     <button title="Open Create Car Form" type="button" class="btn btn-outline-success"
                         data-toggle="modal" data-target="#new-car-form">
@@ -90,10 +90,10 @@
         <div class="row" id="cars">
         </div>
 
-
+<hr><HR>
         <div class="row mt-5">
             <div class="col">
-                <h1>Houses
+                <h1>Houses 🏠 
                     <!-- Button trigger modal -->
                     <button title="Open Create Car Form" type="button" class="btn btn-outline-success"
                         data-toggle="modal" data-target="#new-house-form">
@@ -108,14 +108,14 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">New Hosue</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">New House 🏘 </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <!-- when submitted run the function provided
                     this can be triggered by the button or the enter key -->
-                    <form onsubmit="app.carsController.createCar()">
+                    <form onsubmit="app.housesController.createHouse()">
                         <div class="modal-body">
                             <!-- Form to create a car  -->
                             <div class="form-group">
@@ -132,13 +132,9 @@
                                 <input type="text" class="form-control" id="bathrooms" placeholder="Bathrooms..."required>
                             </div>
                             <div class="form-group">
-                                <label for="price">Price</label>
-                                <input type="number" class="form-control" id="price" placeholder="Price..." min="1">
-                            </div>
-                            <div class="form-group">
                                 <label for="levels">Levels</label>
                                 <input type="text" class="form-control" id="levels" placeholder="Levels..."
-                                    minlength="3" maxlength="20">
+                                    minlength="1" maxlength="10">
                             </div>
                             <div class="form-group">
                                 <label for="year">Year</label>
@@ -165,63 +161,59 @@
         </div>
         <div class="row" id="houses">
         </div>
+        <hr><HR>
 
 
 
 
         <div class="row mt-5">
             <div class="col">
-                <h1>Jobs
+                <h1>Jobs 💻 
                     <!-- Button trigger modal -->
-                    <button title="Open Create Car Form" type="button" class="btn btn-outline-success"
-                        data-toggle="modal" data-target="#new-car-form">
+                    <button title="Open Create Jobs Form" type="button" class="btn btn-outline-success"
+                        data-toggle="modal" data-target="#new-job-form">
                         <i class="fas fa-plus" aria-hidden="true"></i>
                     </button>
                 </h1>
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="new-car-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="new-job-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">New Car</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">New Job</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <!-- when submitted run the function provided
                     this can be triggered by the button or the enter key -->
-                    <form onsubmit="app.carsController.createCar()">
+                    <form onsubmit="app.jobsController.createJob()">
                         <div class="modal-body">
-                            <!-- Form to create a car  -->
+                            <!-- Form to create a Job  -->
                             <div class="form-group">
-                                <label for="make">Make</label>
+                                <label for="company">Company</label>
                                 <!-- the id determines the property on the form object -->
-                                <input type="text" class="form-control" id="make" placeholder="Make..." required>
-                            </div>
-                            <div class="form-group">
-                                <label for="model">Model</label>
-                                <input type="text" class="form-control" id="model" placeholder="Model..." required>
-                            </div>
-                            <div class="form-group">
-                                <label for="make">Year</label>
-                                <input type="number" class="form-control" id="year" placeholder="Year..." min="1920"
-                                    max="2021" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Price</label>
-                                <input type="number" class="form-control" id="price" placeholder="Price..." min="1">
+                                <input type="text" class="form-control" id="company" placeholder="Company..." required>
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <input type="text" class="form-control" id="description" placeholder="Description..."
-                                    minlength="3" maxlength="20">
+                                <input type="text" class="form-control" id="description" placeholder="Description..." required>
                             </div>
                             <div class="form-group">
-                                <label for="imgUrl">Image Url</label>
-                                <input type="text" class="form-control" id="imgUrl" placeholder="Url...">
+                                <label for="jobTitle">Job Title</label>
+                                <input type="text" class="form-control" id="jobTitle" placeholder="Job Title..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hours">Hours</label>
+                                <input type="number" class="form-control" id="hours" placeholder="Hours..." min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="rate">Rate</label>
+                                <input type="text" class="form-control" id="rate" placeholder="Rate..."
+                                    minlength="3" maxlength="20">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -235,13 +227,14 @@
         <div class="row" id="jobs">
         </div>
 
+        <hr><HR>
 
 
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
             <div class="col p-2">
-                <p><small>Made with ♥ by Codeworks</small></p>
+                <p><small>Made with 🔨 by  Daniel</small></p>
             </div>
         </div>
     </footer>

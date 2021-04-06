@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js";
-import { carsService } from "../Services/CarsService.js";
+import { housesService } from "../Services/HousesService.js";
+
 
 
 //Private
@@ -18,7 +19,7 @@ export default class HousesController {
     ProxyState.on('houses', _draw);
 
     // REVIEW
-    // GET CARS ON LOAD
+    // GET HOUSES ON LOAD
     this.getHouses()
   }
 
@@ -63,7 +64,7 @@ export default class HousesController {
 
   deleteHouse(id) {
     try {
-      carsService.deleteHosue(id)
+      housesService.deleteHosue(id)
     } catch (error) {
       console.error(error)
     }
