@@ -11,15 +11,15 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/style/main.css">
-    <title>gregslist</title>
+    <title>Gregs List 🥕 </title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">GregsList</span>
+                <img src="assets/img/logo2.png" width="35%" height="35%" alt="" loading="lazy">
+                <span class="ml-2">Greg💰   List</span>
             </a>
         </nav>
     </header>
@@ -89,6 +89,154 @@
         </div>
         <div class="row" id="cars">
         </div>
+
+
+        <div class="row mt-5">
+            <div class="col">
+                <h1>Houses
+                    <!-- Button trigger modal -->
+                    <button title="Open Create Car Form" type="button" class="btn btn-outline-success"
+                        data-toggle="modal" data-target="#new-house-form">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </button>
+                </h1>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="new-house-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New Hosue</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- when submitted run the function provided
+                    this can be triggered by the button or the enter key -->
+                    <form onsubmit="app.carsController.createCar()">
+                        <div class="modal-body">
+                            <!-- Form to create a car  -->
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <!-- the id determines the property on the form object -->
+                                <input type="text" class="form-control" id="price" placeholder="Price..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bedrooms">Bedrooms</label>
+                                <input type="text" class="form-control" id="bedrooms" placeholder="Bedrooms..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bathrooms">Bathrooms</label>
+                                <input type="text" class="form-control" id="bathrooms" placeholder="Bathrooms..."required>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <input type="number" class="form-control" id="price" placeholder="Price..." min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="levels">Levels</label>
+                                <input type="text" class="form-control" id="levels" placeholder="Levels..."
+                                    minlength="3" maxlength="20">
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <input type="text" class="form-control" id="year" placeholder="Year..."
+                                    minlength="1" maxlength="4">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" class="form-control" id="description" placeholder="Description..."
+                                    minlength="3" maxlength="20">
+                            </div>
+                            <div class="form-group">
+                                <label for="imgUrl">Image Url</label>
+                                <input type="text" class="form-control" id="imgUrl" placeholder="Url...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="houses">
+        </div>
+
+
+
+
+        <div class="row mt-5">
+            <div class="col">
+                <h1>Jobs
+                    <!-- Button trigger modal -->
+                    <button title="Open Create Car Form" type="button" class="btn btn-outline-success"
+                        data-toggle="modal" data-target="#new-car-form">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </button>
+                </h1>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="new-car-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New Car</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- when submitted run the function provided
+                    this can be triggered by the button or the enter key -->
+                    <form onsubmit="app.carsController.createCar()">
+                        <div class="modal-body">
+                            <!-- Form to create a car  -->
+                            <div class="form-group">
+                                <label for="make">Make</label>
+                                <!-- the id determines the property on the form object -->
+                                <input type="text" class="form-control" id="make" placeholder="Make..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="model">Model</label>
+                                <input type="text" class="form-control" id="model" placeholder="Model..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="make">Year</label>
+                                <input type="number" class="form-control" id="year" placeholder="Year..." min="1920"
+                                    max="2021" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <input type="number" class="form-control" id="price" placeholder="Price..." min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" class="form-control" id="description" placeholder="Description..."
+                                    minlength="3" maxlength="20">
+                            </div>
+                            <div class="form-group">
+                                <label for="imgUrl">Image Url</label>
+                                <input type="text" class="form-control" id="imgUrl" placeholder="Url...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="jobs">
+        </div>
+
+
+
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
